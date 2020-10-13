@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14fb3a8b-bd4e-484f-bf8a-67a95a6d5f3a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Authentication.php" beforeDir="false" afterPath="$PROJECT_DIR$/Authentication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/Db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/Registration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/homepage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +38,7 @@
       <workItem from="1602588048942" duration="25000" />
       <workItem from="1602588074720" duration="232000" />
       <workItem from="1602588307657" duration="23000" />
-      <workItem from="1602588342237" duration="792000" />
+      <workItem from="1602588342237" duration="1036000" />
     </task>
     <servers />
   </component>

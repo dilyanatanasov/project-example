@@ -32,7 +32,7 @@ if (!empty($_POST) &&
             <div class="col-md-6">
                 <div class="card">
                     <form class="box" method="POST" action="Registration.php">
-                        <h1>Login</h1>
+                        <h1>Register</h1>
                         <p class="text-muted"> Please pick your username and password!</p> <input type="text" name="username" placeholder="Username"> <input type="password" name="password" placeholder="Password"> <a class="forgot text-muted" href="login.php">Already have one</a> <input type="submit" name="" value="Register">
                     </form>
                 </div>
