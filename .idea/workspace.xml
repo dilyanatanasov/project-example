@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="14fb3a8b-bd4e-484f-bf8a-67a95a6d5f3a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Authentication.php" beforeDir="false" afterPath="$PROJECT_DIR$/Authentication.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/Db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/Registration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/homepage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ioy4NAkOSNchafaLIwffjGRzo6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="14fb3a8b-bd4e-484f-bf8a-67a95a6d5f3a" name="Default Changelist" comment="" />
+      <created>1602588047857</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602588047857</updated>
+      <workItem from="1602588048942" duration="25000" />
+      <workItem from="1602588074720" duration="232000" />
+      <workItem from="1602588307657" duration="23000" />
+      <workItem from="1602588342237" duration="792000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="777" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1602588303238">
+      <screen x="68" y="27" width="1852" height="1053" />
+    </state>
+    <state x="777" y="311" width="424" height="491" key="FileChooserDialogImpl/68.27.1852.1053@68.27.1852.1053" timestamp="1602588303238" />
+    <state x="719" y="467" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1602588353890">
+      <screen x="68" y="27" width="1852" height="1053" />
+    </state>
+    <state x="719" y="467" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/68.27.1852.1053@68.27.1852.1053" timestamp="1602588353890" />
+  </component>
+</project>

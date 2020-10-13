@@ -20,7 +20,7 @@ if (!empty($_POST) &&
     <title>Home page</title>
 </head>
 <body>
-    <div>
+    <div class="container">
         <h1>Welcome to our webpage!</h1>
     </div>
     <form method="POST" action="homepage.php">
