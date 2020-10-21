@@ -1,5 +1,9 @@
 <?php
-require_once "Authentication.php";
+session_start();
+if (empty($_SESSION["uid"])) {
+   header("Location: index.php");
+}
+require_once "/opt/lampp/htdocs/project-example/core/Authentication.php";
 
 // If there is a post request
 // And if there is a logout key
@@ -12,20 +16,6 @@ if (!empty($_POST) &&
     $auth->logout();
 }
 
-?>
+require_once "/opt/lampp/htdocs/project-example/views/homepage.html";
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Home page</title>
-</head>
-<body>
-    <div class="container">
-        <h1>Welcome to our webpage!</h1>
-    </div>
-    <form method="POST" action="homepage.php">
-<!-- To give data of button you have to give it a name attribute-->
-        <input type="submit" name="logout" value="Logout">
-    </form>
-</body>
-</html>
+?>

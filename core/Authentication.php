@@ -1,6 +1,6 @@
 <?php
 require_once "Db.php";
-require_once "UserRepository.php";
+require_once "/opt/lampp/htdocs/project-example/repositories/UserRepository.php";
 
 /**
  * Class Authentication
@@ -27,9 +27,9 @@ class Authentication {
         $userFromDb = $this->userRepository->getUserCredentials($this->username, $this->password);
         if (!empty($userFromDb)) {
             $_SESSION["uid"] = $userFromDb["id"];
-            header("Location: homepage.php");
+            header("Location: ../homepage.php");
         } else {
-            header("Location: index.html");
+            header("Location: index.php");
         }
     }
 
@@ -39,6 +39,6 @@ class Authentication {
     public function logout() {
         $_SESSION["uid"] = "";
         session_destroy();
-        header("Location: index.html");
+        header("Location: index.php");
     }
 }

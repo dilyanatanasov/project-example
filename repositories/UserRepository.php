@@ -1,5 +1,5 @@
 <?php
-require_once "Db.php";
+require_once "/opt/lampp/htdocs/project-example/core/Db.php";
 
 class UserRepository extends Db {
     function __constructor() {
@@ -23,6 +23,7 @@ class UserRepository extends Db {
                     password = '".$password."'
                 LIMIT 1";
         $stmt = $this->connection->query($sql);
+
         $user = $stmt->fetchAll();
 
         if (empty($user)) {
