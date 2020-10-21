@@ -1,5 +1,5 @@
 <?php
-require_once "/opt/lampp/htdocs/project-example/core/Db.php";
+require_once dirname(dirname(__FILE__)). "/core/Db.php";
 
 class UserRepository extends Db {
     function __constructor() {
@@ -14,18 +14,19 @@ class UserRepository extends Db {
     }
 
     public function getUserCredentials($username, $password) {
-        $sql = "SELECT 
+        $stmt = $this->connection->prepare("SELECT 
                     * 
                 FROM 
                     user_credentials
                 WHERE
-                    username = '".$username."' AND
-                    password = '".$password."'
-                LIMIT 1";
-        $stmt = $this->connection->query($sql);
-
+                    username = :username AND
+                    password = :password
+                LIMIT 1");
+        $stmt->bindValue(":username", $username, PDO::PARAM_STR);
+        $stmt->bindValue(":password", $password, PDO::PARAM_STR);
+        $stmt->execute();
         $user = $stmt->fetchAll();
-
+        
         if (empty($user)) {
             return [];
         } else {

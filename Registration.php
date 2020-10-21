@@ -1,5 +1,5 @@
 <?php
-require_once "/opt/lampp/htdocs/project-example/repositories/UserRepository.php";
+require_once dirname(__FILE__). "/repositories/UserRepository.php";
 
 if (!empty($_POST) &&
     isset($_POST["username"]) &&
@@ -14,11 +14,11 @@ if (!empty($_POST) &&
     $hashedPassword = hash("sha512", $password);
 
     if ($userRepository->addNewUser($username, $hashedPassword)) {
-        header("Location: /opt/lampp/htdocs/project-example/index.php");
+        header("Location: index.php");
     }
 }
 
-require_once "/opt/lampp/htdocs/project-example/views/registrationpage.html";
+require_once dirname(__FILE__). "/views/registrationpage.html";
 
 ?>
 

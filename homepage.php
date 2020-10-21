@@ -3,7 +3,7 @@ session_start();
 if (empty($_SESSION["uid"])) {
    header("Location: index.php");
 }
-require_once "/opt/lampp/htdocs/project-example/core/Authentication.php";
+require_once dirname(__FILE__). "/core/Authentication.php";
 
 // If there is a post request
 // And if there is a logout key
@@ -16,6 +16,6 @@ if (!empty($_POST) &&
     $auth->logout();
 }
 
-require_once "/opt/lampp/htdocs/project-example/views/homepage.html";
+require_once dirname(__FILE__). "/views/homepage.html";
 
 ?>

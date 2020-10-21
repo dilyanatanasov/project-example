@@ -1,6 +1,6 @@
 <?php
 require_once "Db.php";
-require_once "/opt/lampp/htdocs/project-example/repositories/UserRepository.php";
+require_once dirname(dirname(__FILE__)). "/repositories/UserRepository.php";
 
 /**
  * Class Authentication
@@ -25,6 +25,7 @@ class Authentication {
         $this->password = $pwd;
 
         $userFromDb = $this->userRepository->getUserCredentials($this->username, $this->password);
+
         if (!empty($userFromDb)) {
             $_SESSION["uid"] = $userFromDb["id"];
             header("Location: ../homepage.php");

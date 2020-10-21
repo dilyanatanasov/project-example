@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "/opt/lampp/htdocs/project-example/core/Authentication.php";
+require_once dirname(dirname(__FILE__)). "/core/Authentication.php";
 
 if (!empty($_POST) && isset($_POST["username"]) && !empty($_POST["username"])) {
     // echo "Your username is ".$_POST["username"];
