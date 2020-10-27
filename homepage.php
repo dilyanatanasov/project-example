@@ -21,6 +21,10 @@ if (!empty($_POST) &&
 $movieRepository = new MovieRepository();
 $movies = $movieRepository->getAllMovies();
 
+
+require_once dirname(__FILE__). "/views/heading.html";
+require_once dirname(__FILE__). "/views/homepage.html";
+
 echo "<table style='text-align=center'>
         <tr>
             <th>Title</th>
@@ -32,17 +36,14 @@ echo "<table style='text-align=center'>
 
 foreach($movies as $movie) {
     echo "
-    <tr>
-        <td>".$movie['title']."</td>
-        <td>".$movie['description']."</td>
-        <td>".$movie['main_actor']."</td>
-        <td>".$movie['thumbnail']."</td>
-        <td>".$movie['duration']."</td>
-    </tr>
+        <tr>
+            <td>".$movie['title']."</td>
+            <td>".$movie['description']."</td>
+            <td>".$movie['main_actor']."</td>
+            <td>".$movie['thumbnail']."</td>
+            <td>".$movie['duration']."</td>
+        </tr>
     ";
 }
-
-require_once dirname(__FILE__). "/views/heading.html";
-require_once dirname(__FILE__). "/views/homepage.html";
-
+echo "</table>";
 ?>
