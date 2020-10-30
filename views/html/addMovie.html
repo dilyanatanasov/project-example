@@ -1,16 +1,21 @@
-        <h1>Add Movie</h1>
-        <form method="POST" action="addMovie.php">
-            <label>Title</label><br>
-            <input type="text" name="title"><br>
-            <label>Description</label><br>
-            <textarea name="description"></textarea><br>
-            <label>Main Actor(Not Required)</label><br>
-            <input type="text" name="main_actor"><br>
-            <label>Thumbnail</label><br>
-            <input type="text" name="thumbnail"><br>
-            <label>Duration</label><br>
-            <input type="number" max="300" name="duration"><br>
-            <button type="submit">Add Movie</button>
-        </form>
+        <div class="container">
+            <h1>Add Movie</h1>
+            <form method="POST" action="addMovie.php">
+                <div class="form-group" >
+                    <label>Title</label><br>
+                    <input type="text" name="title"><br>
+                    <label>Description</label><br>
+                    <textarea name="description"></textarea><br>
+                    <label>Main Actor(Not Required)</label><br>
+                    <input type="text" name="main_actor"><br>
+                    <label>Thumbnail</label><br>
+                    <input type="text" name="thumbnail"><br>
+                    <label>Duration</label><br>
+                    <input type="number" max="300" name="duration"><br>
+                    <button class="btn btn-warning mt-3" type="submit">Add Movie</button>
+                </div>
+            </form>
+        </div>
+        
     </body>
 </html>

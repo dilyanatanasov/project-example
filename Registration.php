@@ -18,7 +18,7 @@ if (!empty($_POST) &&
     }
 }
 
-require_once dirname(__FILE__). "/views/registrationpage.html";
+require_once dirname(__FILE__). "/views/html/registrationpage.html";
 
 ?>
 

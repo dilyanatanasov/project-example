@@ -7,10 +7,6 @@ if (empty($_SESSION["uid"])) {
 require_once dirname(__FILE__). "/repositories/MovieRepository.php";
 require_once dirname(__FILE__). "/core/Authentication.php";
 
-// If there is a post request
-// And if there is a logout key
-// And if the logout key has a value that is not empty "" or NULL
-// Then logout
 if (!empty($_POST) &&
     isset($_POST["logout"]) &&
     !empty($_POST["logout"])) {
@@ -21,11 +17,11 @@ if (!empty($_POST) &&
 $movieRepository = new MovieRepository();
 $movies = $movieRepository->getAllMovies();
 
+require_once dirname(__FILE__). "/views/html/heading.html";
+require_once dirname(__FILE__). "/views/html/homepage.html";
 
-require_once dirname(__FILE__). "/views/heading.html";
-require_once dirname(__FILE__). "/views/homepage.html";
-
-echo "<table style='text-align=center'>
+echo "<div class='container'>
+        <table class='table' style='text-align=center'>
         <tr>
             <th>Title</th>
             <th>Description</th>
@@ -45,5 +41,6 @@ foreach($movies as $movie) {
         </tr>
     ";
 }
-echo "</table>";
+echo "</table>
+    </div>";
 ?>

@@ -4,5 +4,5 @@ if (!empty($_SESSION["uid"])) {
     header("Location: homepage.php");
 }
 
-require_once dirname(__FILE__). "/views/loginpage.html";
+require_once dirname(__FILE__). "/views/html/loginpage.html";
 ?>

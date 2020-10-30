@@ -26,5 +26,5 @@ if (!empty($_POST)) {
     }
 }
 
-require_once dirname(__FILE__). "/views/heading.html";
-require_once dirname(__FILE__). "/views/addMovie.html";
+require_once dirname(__FILE__). "/views/html/heading.html";
+require_once dirname(__FILE__). "/views/html/addMovie.html";
