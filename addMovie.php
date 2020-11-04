@@ -19,7 +19,7 @@ if (!empty($_POST)) {
             $_POST["thumbnail"],
             $_POST["duration"]
         )) {
-            header("Location: homepage.php");
+            header("Location: movie.php");
         }
     } else {
         echo "Error";

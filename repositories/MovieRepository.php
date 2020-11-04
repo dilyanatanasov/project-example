@@ -25,6 +25,23 @@ class MovieRepository extends Db {
         return true;
     }
 
+    public function updateMovieById($update_data) {
+        $sql = "
+            UPDATE
+                movies
+            SET 
+              `title` = '".$update_data['title']."',
+              `description` = '".$update_data['description']."',
+              `main_actor` = '".$update_data['main_actor']."',
+              `thumbnail` = '".$update_data['thumbnail']."',
+              `duration` = '".$update_data['duration']."'
+            WHERE
+                id = ".$update_data['movie_id']."
+        ";
+        $this->connection->exec($sql);
+        return true;
+    }
+
     public function getAllMovies() {
         $sql = "SELECT * FROM movies";
         $result = $this->connection->query($sql);
@@ -35,5 +52,26 @@ class MovieRepository extends Db {
         } else {
             return [];
         }
+    }
+
+    public function getMovieById($id) {
+        $sql = "SELECT * FROM movies WHERE id = ".$id.";";
+        $result = $this->connection->query($sql);
+        $movie = $result->fetchAll();
+
+        if (!empty($movie)) {
+            return $movie[0];
+        } else {
+            return [];
+        }
+    }
+
+    public function deleteMovieById($id) {
+        $sql = "DELETE FROM 
+                    movies
+                WHERE
+                    id = ".$id.";";
+        $this->connection->exec($sql);
+        return true;
     }
 }
