@@ -31,15 +31,51 @@ foreach($movies as $movie) {
                 <form method='GET' action='update.php'>
                     <button class='btn btn-success' 'type='submit' name='movie_id' value='".$movie['id']."'>Update</button>
                 </form>
-                <form method='POST' action='delete.php'>
-                    <button class='btn btn-danger' type='submit' name='delete' value='".$movie['id']."'>Delete</button>
-                </form>
+                <a href='/project-example/movie.php?token=abc1234&action=delete&data=".$movie['id']."'><button class='btn btn-danger'>Delete</button></a>
             </td>
         </tr>
     ";
 }
-
 echo "</table>
-    </div>
+    <h4 id='snackbar' class='hideSnackbar'></h1>
+";
+
+?>
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const token = urlParams.get("token");
+    const action = urlParams.get("action");
+    const data = urlParams.get("data");
+
+    showMessage = (message) => {
+        let snackbar = document.getElementById("snackbar");
+        document.getElementById("snackbar").innerHTML = message;
+        snackbar.style.display = "block";
+        snackbar.style.padding = "10px";
+        setTimeout(() => {
+            snackbar.style.display = "none";
+        }, 2000)
+    }
+
+    if (
+        token !== undefined &&
+        action !== undefined &&
+        data !== undefined
+    ) {
+        postData("http://localhost/project-example/api/api.php", {
+            token: token,
+            action: action,
+            data: data
+        }).then((data) => {
+            if (data.message !== undefined && data.message === "Successfully deleted") {
+                showMessage(data.message);
+            } else {
+                console.log("Unauthorized");
+            }
+        });    
+    }
+    
+</script>
+     </div>
   </body>
-</html>";
+</html>
