@@ -42,6 +42,7 @@ echo "</table>
 
 ?>
 <script>
+             
     const urlParams = new URLSearchParams(window.location.search);
     const token = urlParams.get("token");
     const action = urlParams.get("action");
@@ -79,3 +80,4 @@ echo "</table>
      </div>
   </body>
 </html>
+

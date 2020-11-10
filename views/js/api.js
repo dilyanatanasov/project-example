@@ -11,9 +11,3 @@ async function postData(url = 'http://localhost/project-example/api/api.php', da
 
   return response.json(); // parses JSON response into native JavaScript objects
 }
-
-postData("http://localhost/project-example/api/api.php", {
-            token: "abc1234",
-            data: "Something",
-            action: "test"
-        });

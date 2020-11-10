@@ -11,9 +11,12 @@ if (!empty($_POST) &&
 
     $username = $_POST["username"];
     $password = $_POST["password"];
+    $access = $_POST["access"];
     $hashedPassword = hash("sha512", $password);
-
-    if ($userRepository->addNewUser($username, $hashedPassword)) {
+    print_r($username);
+    print_r($password);
+    print_r($access);
+    if ($userRepository->addNewUser($username, $hashedPassword, $access)) {
         header("Location: index.php");
     }
 }

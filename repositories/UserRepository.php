@@ -6,9 +6,9 @@ class UserRepository extends Db {
         // TODO
     }
 
-    public function addNewUser($username, $password) {
-        $sql = "INSERT INTO user_credentials(id, username, password)
-                VALUE (NULL, '".$username."', '".$password."')";
+    public function addNewUser($username, $password, $access) {
+        $sql = "INSERT INTO user_credentials(id, username, password, access)
+                VALUE (NULL, '".$username."', '".$password."', $access)";
         $this->connection->exec($sql);
         return true;
     }
