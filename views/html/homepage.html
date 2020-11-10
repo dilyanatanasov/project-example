@@ -2,4 +2,26 @@
             <h1>Homepage</h1>
         </div>
     </body>
+    <script>
+        async function postData(url = 'http://localhost/project-example/api/api.php', data = {}) {
+    // Default options are marked with *
+    const result = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
+    });
+
+        return result.json();
+    }
+
+  postData('http://localhost/project-example/api/api.php', {
+      token: "abc1234",
+      data: "Something",
+      action: "test"
+  }).then(data => {
+      console.log(data);
+  });
+    </script>
 </html>

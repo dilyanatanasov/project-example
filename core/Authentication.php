@@ -42,4 +42,8 @@ class Authentication {
         session_destroy();
         header("Location: index.php");
     }
+
+    public function validToken($token) {
+        return ($token === "abc1234");
+    }
 }
