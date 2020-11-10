@@ -53,7 +53,7 @@ echo "</table>
         snackbar.style.display = "block";
         snackbar.style.padding = "10px";
         setTimeout(() => {
-            snackbar.style.display = "none";
+            window.location.href = "http://localhost/project-example/movie.php";
         }, 2000)
     }
 
