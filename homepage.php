@@ -1,5 +1,6 @@
 <?php
-session_start();
+
+require_once dirname(__FILE__). "/views/html/heading.php";
 if (empty($_SESSION["uid"])) {
    header("Location: index.php");
 }
@@ -13,6 +14,5 @@ if (!empty($_POST) &&
     $auth->logout();
 }
 
-require_once dirname(__FILE__). "/views/html/heading.html";
 require_once dirname(__FILE__). "/views/html/homepage.html";
 ?>

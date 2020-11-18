@@ -1,7 +1,7 @@
 <?php
 require_once dirname(__FILE__). "/repositories/MovieRepository.php";
 
-require_once dirname(__FILE__). "/views/html/heading.html";
+require_once dirname(__FILE__). "/views/html/heading.php";
 require_once dirname(__FILE__). "/views/html/movies.html";
 
 
@@ -27,12 +27,17 @@ foreach($movies as $movie) {
             <td>".$movie['main_actor']."</td>
             <td>".$movie['thumbnail']."</td>
             <td>".$movie['duration']."</td>
-            <td class='form-group'>
-                <form method='GET' action='update.php'>
-                    <button class='btn btn-success' 'type='submit' name='movie_id' value='".$movie['id']."'>Update</button>
-                </form>
-                <a href='/project-example/movie.php?token=abc1234&action=delete&data=".$movie['id']."'><button class='btn btn-danger'>Delete</button></a>
-            </td>
+            <td class='form-group'>";
+    if ($_SESSION["access"] == 1) {
+        echo "<form method='GET' action='update.php'>
+                <button class='btn btn-success' 'type='submit' name='movie_id' value='".$movie['id']."'>Update</button>
+            </form>
+            <a href='/project-example/movie.php?token=abc1234&action=delete&data=".$movie['id']."'><button class='btn btn-danger'>Delete</button></a>";
+    } elseif ($_SESSION["access"] == 0) {
+        echo "<h6>Not Available</h4>";
+    }
+
+    echo "</td>
         </tr>
     ";
 }

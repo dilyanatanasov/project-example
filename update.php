@@ -1,7 +1,7 @@
 <?php
 require_once dirname(__FILE__). "/repositories/MovieRepository.php";
 
-require_once dirname(__FILE__). "/views/html/heading.html";
+require_once dirname(__FILE__). "/views/html/heading.php";
 require_once dirname(__FILE__). "/views/html/update.html";
 
 $movieRepository = new MovieRepository();

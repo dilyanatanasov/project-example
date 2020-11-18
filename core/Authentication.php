@@ -28,6 +28,8 @@ class Authentication {
 
         if (!empty($userFromDb)) {
             $_SESSION["uid"] = $userFromDb["id"];
+            $_SESSION["username"] = $userFromDb["username"];
+            $_SESSION["access"] = $userFromDb["access"];
             header("Location: ../homepage.php");
         } else {
             header("Location: index.php");

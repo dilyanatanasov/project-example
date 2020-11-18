@@ -6,6 +6,12 @@ class UserRepository extends Db {
         // TODO
     }
 
+    public function getAllUsers() {
+        $sql = "SELECT * FROM user_credentials";
+        $stmt = $this->connection->query($sql);
+        return $stmt->fetchAll();
+    }
+
     public function addNewUser($username, $password, $access) {
         $sql = "INSERT INTO user_credentials(id, username, password, access)
                 VALUE (NULL, '".$username."', '".$password."', $access)";
@@ -32,5 +38,41 @@ class UserRepository extends Db {
         } else {
             return $user[0];
         }
+    }
+
+    public function getUserByPin($pin) {
+        $stmt = $this->connection->query("SELECT 
+                    * 
+                FROM 
+                    user_credentials
+                WHERE
+                    username LIKE '%".$pin."%'");
+        $result = $stmt->fetchAll();
+        return $result;
+    }
+
+    public function getUserById($id) {
+        $sql = "SELECT 
+                    * 
+                FROM 
+                    user_credentials
+                WHERE
+                    id = $id";
+        $stmt = $this->connection->query($sql); 
+        $stmt->execute(); 
+        return $stmt->fetch();
+    }
+
+    public function updateUserById($data) {
+        $sql = "
+            UPDATE
+                user_credentials
+            SET 
+                `access` = ".$data['access']."
+            WHERE
+                id = ".$data['update_id']."
+        ";
+        $this->connection->exec($sql);
+        return true;
     }
 }

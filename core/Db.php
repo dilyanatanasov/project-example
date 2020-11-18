@@ -7,7 +7,7 @@ class Db {
     private $db = "project_example";
     private $db_username = "root";
     private $db_password = "";
-
+    
     function __construct() {
         try {
             $this->connection = new PDO("mysql:host=$this->servername;dbname=$this->db", $this->db_username, $this->db_password);
