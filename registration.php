@@ -13,16 +13,10 @@ if (!empty($_POST) &&
     $password = $_POST["password"];
     $access = $_POST["access"];
     $hashedPassword = hash("sha512", $password);
-    print_r($username);
-    print_r($password);
-    print_r($access);
-    if ($userRepository->addNewUser($username, $hashedPassword, $access)) {
+    if ($userRepository->addNewUser($username, $hashedPassword)) {
         header("Location: index.php");
     }
 }
 
 require_once dirname(__FILE__). "/views/html/registrationpage.html";
-
-?>
-
 
