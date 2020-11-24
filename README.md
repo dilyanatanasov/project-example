@@ -11,4 +11,4 @@ Disclaimer: this isn't a perfect example but is meant to show different techniqu
 
 
 zdrasti
-zdravei i na teb
+zdravei i na teb otnovo
