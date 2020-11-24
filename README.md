@@ -11,8 +11,4 @@ Disclaimer: this isn't a perfect example but is meant to show different techniqu
 
 
 zdrasti
-<<<<<<< HEAD
-zdravei i na teb manyak
-=======
 zdravei i na teb otnovo
->>>>>>> a8c664c7ea1e3574b42cdc18a3bbcb44190d3e41
