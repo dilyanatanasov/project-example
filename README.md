@@ -4,11 +4,6 @@ The main goal of this project is to display the technologies covered in the cour
 Some of the programming means used in this demonstrative application are:
 - php
 - js
-- html
-- css
-- mysql
-- ajax
-- python
 
 The code is written almost exclusively in OOP and is applying the MVC model of communication between the different classes we create.
 
