@@ -2,7 +2,11 @@
 
 The main goal of this project is to display the technologies covered in the course "Programming of online applications". 
 Some of the programming means used in this demonstrative application are:
+<<<<<<< HEAD
 - php7
+=======
+- php5
+>>>>>>> 86c6c07dec6e9a19ae05a11d73d24cdabb8eb71e
 - js
 
 The code is written almost exclusively in OOP and is applying the MVC model of communication between the different classes we create.
