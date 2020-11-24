@@ -30,11 +30,6 @@ if (!empty($_SESSION)) {
                                         </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/project-example/search.php">Search
-                                        <span class="sr-only">(current)</span>
-                                        </a>
-                                </li>
-                                <li class="nav-item">
                                     <a class="nav-link" href="/project-example/about.php">About</a>
                                 </li>
                                 <li class="nav-item">

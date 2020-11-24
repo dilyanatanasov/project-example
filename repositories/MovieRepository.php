@@ -74,4 +74,18 @@ class MovieRepository extends Db {
         $this->connection->exec($sql);
         return true;
     }
+
+    public function getMovieSearchResults($search_topic) {
+        $topic_lowercase = strtolower($search_topic);
+        $sql = "SELECT 
+                    *
+                FROM 
+                    movies 
+                WHERE
+                    `title` LIKE '%$topic_lowercase%' OR
+                    `description` LIKE '%$topic_lowercase%' OR
+                    `main_actor` LIKE '%$topic_lowercase%'";
+        $result = $this->connection->query($sql);
+        return $result->fetchAll();
+    }
 }

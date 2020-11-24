@@ -1,11 +1,10 @@
 <?php 
-session_start();
+require_once dirname(__FILE__). "/views/html/heading.php";
+
 if ($_SESSION["uid"] === 1) {
     header("Location: index.php");
- }
+}
 
-
-require_once dirname(__FILE__). "/views/html/heading.php";
 require_once dirname(__FILE__). "/views/html/modify_user.html";
 
 require_once dirname(__FILE__). "/repositories/UserRepository.php";
