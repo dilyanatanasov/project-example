@@ -8,6 +8,7 @@ Some of the programming means used in this demonstrative application are:
 - css
 - mysql
 - ajax
+- python
 
 The code is written almost exclusively in OOP and is applying the MVC model of communication between the different classes we create.
 
