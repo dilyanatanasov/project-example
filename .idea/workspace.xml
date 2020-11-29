@@ -20,8 +20,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cineme-swipe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
@@ -47,6 +48,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="168" y="127" width="1652" height="853" key="DiffContextDialog" timestamp="1606652323212">
+      <screen x="68" y="27" width="1852" height="1053" />
+    </state>
+    <state x="168" y="127" width="1652" height="853" key="DiffContextDialog/68.27.1852.1053/68.27.1852.1053@68.27.1852.1053" timestamp="1606652323212" />
     <state x="777" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1603305220364">
       <screen x="68" y="27" width="1852" height="1053" />
     </state>
@@ -56,6 +61,10 @@
       <screen x="68" y="27" width="1852" height="1053" />
     </state>
     <state x="483" y="188" width="1022" height="737" key="SettingsEditor/68.27.1852.1053/0.1080.1920.1080@68.27.1852.1053" timestamp="1603295294676" />
+    <state x="657" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1606652256865">
+      <screen x="68" y="27" width="1852" height="1053" />
+    </state>
+    <state x="657" y="259" width="672" height="678" key="search.everywhere.popup/68.27.1852.1053/68.27.1852.1053@68.27.1852.1053" timestamp="1606652256865" />
     <state x="719" y="467" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1602588353890">
       <screen x="68" y="27" width="1852" height="1053" />
     </state>
