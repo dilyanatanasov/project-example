@@ -63,14 +63,25 @@ class UserRepository extends Db {
         return $stmt->fetch();
     }
 
-    public function updateUserById($data) {
+    public function updateUserById($id, $data) {
         $sql = "
             UPDATE
                 user_credentials
             SET 
                 `access` = ".$data['access']."
             WHERE
-                id = ".$data['update_id']."
+                id = $id
+        ";
+        $this->connection->exec($sql);
+        return true;
+    }
+
+    public function deleteById($id) {
+        $sql = "
+            DELETE FROM
+                user_credentials
+            WHERE
+                id = $id
         ";
         $this->connection->exec($sql);
         return true;
