@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="14fb3a8b-bd4e-484f-bf8a-67a95a6d5f3a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/BaseModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/BaseModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modify_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/modify_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repositories/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/updateUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/updateUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/html/addMovie.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/html/addMovie.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +27,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -51,7 +47,8 @@
       <workItem from="1603131428957" duration="4000" />
       <workItem from="1603295202810" duration="95000" />
       <workItem from="1603305206093" duration="16000" />
-      <workItem from="1606660856765" duration="1330000" />
+      <workItem from="1606660856765" duration="1786000" />
+      <workItem from="1606931417257" duration="1010000" />
     </task>
     <servers />
   </component>
@@ -68,9 +65,10 @@
     </state>
     <state x="777" y="311" key="FileChooserDialogImpl/68.27.1852.1053/0.1080.1920.1080@68.27.1852.1053" timestamp="1603305220364" />
     <state x="777" y="311" width="424" height="491" key="FileChooserDialogImpl/68.27.1852.1053@68.27.1852.1053" timestamp="1602588303238" />
-    <state x="483" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1606652810274">
-      <screen x="68" y="27" width="1852" height="1053" />
+    <state x="483" y="165" width="1022" height="737" key="SettingsEditor" timestamp="1606931442965">
+      <screen x="68" y="0" width="1852" height="1080" />
     </state>
+    <state x="483" y="165" key="SettingsEditor/0.1080.1920.1080/68.0.1852.1080@68.0.1852.1080" timestamp="1606931442965" />
     <state x="483" y="188" width="1022" height="737" key="SettingsEditor/68.27.1852.1053/0.1080.1920.1080@68.27.1852.1053" timestamp="1603295294676" />
     <state x="483" y="188" key="SettingsEditor/68.27.1852.1053/68.27.1852.1053@68.27.1852.1053" timestamp="1606652810274" />
     <state x="657" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1606661352109">
