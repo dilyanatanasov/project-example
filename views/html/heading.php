@@ -26,21 +26,21 @@ if (!empty($_SESSION)) {
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
+                        <li id="homepage" class="nav-item">
                             <a class="nav-link" href="/project-example/homepage.php">Home
                                 <span class="sr-only">(current)</span>
                                 </a>
                         </li>
-                        <li class="nav-item">
+                        <li id="about" class="nav-item">
                             <a class="nav-link" href="/project-example/about.php">About</a>
                         </li>
-                        <li class="nav-item">
+                        <li id="modify_user" class="nav-item">
                             <a class="nav-link" href="/project-example/modify_user.php">Modify User</a>
                         </li>
-                        <li class="nav-item">
+                        <li id="movie" class="nav-item">
                             <a class="nav-link" href="/project-example/movie.php">Movies</a>
                         </li>
-                        <li class="nav-item">
+                        <li id="addMovie" class="nav-item">
                             <a class="nav-link" href="/project-example/addMovie.php">AddMovie</a>
                         </li>
                         <li class="nav-item">
@@ -49,7 +49,6 @@ if (!empty($_SESSION)) {
                                 <button class="btn btn-warning" type="submit" name="logout" value="logout">Logout</button>
                             </form>
                         </li>
-                        
                     </ul>
                 </div>
             </div>
@@ -66,28 +65,33 @@ if (!empty($_SESSION)) {
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/project-example/homepage.php">Home
-                                <span class="sr-only">(current)</span>
-                                </a>
+                        <li id="homepage" class="nav-item">
+                            <a class="nav-link" href="/project-example/homepage.php">Home</a>
                         </li>
-                        <li class="nav-item">
+                        <li id="about" class="nav-item">
                             <a class="nav-link" href="/project-example/about.php">About</a>
                         </li>
-                        <li class="nav-item">
+                        <li id="movie" class="nav-item">
                             <a class="nav-link" href="/project-example/movie.php">Movies</a>
                         </li>
-                        <li class="nav-item">
+                        <li id="" class="nav-item">
                             <form method="POST" action="/project-example/homepage.php">
                                 <!-- To give data of button you have to give it a name attribute-->
                                 <button class="btn btn-warning" type="submit" name="logout" value="logout">Logout</button>
                             </form>
                         </li>
-                        
                     </ul>
                 </div>
             </div>
         </nav>';
     }
+
+    echo "<script>
+        const regex = new RegExp('(?<=\/)(.*?)(?=\.php)');
+        const url = '".$_SERVER['REQUEST_URI']."'.substring(1);
+        const page = regex.exec(url);
+        const current = document.getElementById(page[0]);
+        current.className += ' active';
+    </script>";
 }
 ?>
