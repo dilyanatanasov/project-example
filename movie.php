@@ -1,5 +1,5 @@
 <?php
-require_once dirname(__FILE__). "/repositories/MovieRepository.php";
+require_once dirname(__FILE__). "/models/Movie.php";
 
 require_once dirname(__FILE__). "/views/html/heading.php";
 require_once dirname(__FILE__). "/views/html/movies.html";
@@ -8,17 +8,17 @@ function loadTableContentData($movies) {
     foreach($movies as $movie) {
         echo "
             <tr>
-                <td>".$movie['title']."</td>
-                <td>".$movie['description']."</td>
-                <td>".$movie['main_actor']."</td>
-                <td><img style='width:100px' src='views/img/".$movie['thumbnail']."'/></td>
-                <td>".$movie['duration']."</td>
+                <td>".$movie->title."</td>
+                <td>".$movie->description."</td>
+                <td>".$movie->main_actor."</td>
+                <td><img style='width:100px' src='views/img/".$movie->thumbnail."'/></td>
+                <td>".$movie->duration."</td>
                 <td class='form-group'>";
         if ($_SESSION["access"] == 1) {
             echo "<form class='mb-2' method='GET' action='update.php'>
-                    <button class='btn btn-success' 'type='submit' name='movie_id' value='".$movie['id']."'>Update</button>
+                    <button class='btn btn-success' 'type='submit' name='movie_id' value='".$movie->id."'>Update</button>
                 </form>
-                <a href='/project-example/movie.php?token=abc1234&action=delete&data=".$movie['id']."'><button class='btn btn-danger'>Delete</button></a>";
+                <a href='/project-example/movie.php?token=abc1234&action=delete&data=".$movie->id."'><button class='btn btn-danger'>Delete</button></a>";
         } elseif ($_SESSION["access"] == 0) {
             echo "<h6>Not Available</h4>";
         }
@@ -28,7 +28,7 @@ function loadTableContentData($movies) {
         ";
     }
 }
-$movieRepository = new MovieRepository();
+$movie = new Movie();
 
 $input_topic_data;
 if (!empty($_POST["search_topic"])) {
@@ -54,10 +54,10 @@ echo "<div class='container'>
         </tr>";
 if (!empty($_POST["search_topic"])) {
     $search_topic = $_POST["search_topic"];
-    $movie_search_results = $movieRepository->getMovieSearchResults($search_topic);
+    $movie_search_results = $movie->search($search_topic);
     loadTableContentData($movie_search_results);
 } else {
-    $movies = $movieRepository->getAllMovies();
+    $movies = $movie->list();
     loadTableContentData($movies);
 }
 

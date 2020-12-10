@@ -21,10 +21,10 @@ class Mailer {
 		$mail->SMTPAuth = true;
 		$mail->Username = USERNAME;
 		$mail->Password = PASSWORD;
-		$mail->setFrom($from, 'Movies Page');
+		$mail->setFrom($from, 'Movies Website');
 		$mail->addAddress($to, $name);
 		$mail->Subject = $subject;
-		$mail->msgHTML(file_get_contents('/views/templates/welcome.html'), __DIR__);
+		$mail->msgHTML(file_get_contents(dirname(__DIR__).'/views/templates/welcome.html'));
 		$mail->AltBody = $body;
 		$mail->send();
 		header("Location: homepage.php?sent_mail=true");
