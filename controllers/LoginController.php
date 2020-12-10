@@ -15,7 +15,6 @@ if (!empty($_POST) && isset($_POST["password"]) && !empty($_POST["password"])) {
 }
 
 $username = $_POST["username"];
-
 $password = $_POST["password"];
 $hashedPassword = hash("sha512", $password);
 

@@ -24,7 +24,7 @@ class Mailer {
 		$mail->setFrom($from, 'Movies Page');
 		$mail->addAddress($to, $name);
 		$mail->Subject = $subject;
-		$mail->msgHTML($bodyHTML);
+		$mail->msgHTML(file_get_contents('/views/templates/welcome.html'), __DIR__);
 		$mail->AltBody = $body;
 		$mail->send();
 		header("Location: homepage.php?sent_mail=true");
