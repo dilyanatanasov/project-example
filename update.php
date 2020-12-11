@@ -1,28 +1,28 @@
 <?php
-require_once dirname(__FILE__). "/repositories/MovieRepository.php";
+require_once dirname(__FILE__). "/models/Movie.php";
 
 require_once dirname(__FILE__). "/views/html/heading.php";
 require_once dirname(__FILE__). "/views/html/update.html";
 
-$movieRepository = new MovieRepository();
+$movie = new Movie();
 
 if (!empty($_GET["movie_id"])) {
     $movieId = $_GET["movie_id"];
-    $movie = $movieRepository->getMovieById($movieId);
-    if (!empty($movie)) {
+    $movieData = $movie->view($movieId);
+    if (!empty($movieData)) {
         echo "<div class='container'>
-            <form method='POST' action='update.php?update_id=".$movie['id']."'>
+            <form method='POST' action='update.php?update_id=".$movieData->id."'>
                 <div class='form-group' >
                     <label>Title</label><br>
-                    <input type='text' name='title' value='".$movie['title']."'><br>
+                    <input type='text' name='title' value='".$movieData->title."'><br>
                     <label>Description</label><br>
-                    <textarea name='description'>".$movie['description']."</textarea><br>
+                    <textarea name='description'>".$movieData->description."</textarea><br>
                     <label>Main Actor(Not Required)</label><br>
-                    <input type='text' name='main_actor' value='".$movie['main_actor']."'><br>
+                    <input type='text' name='main_actor' value='".$movieData->main_actor."'><br>
                     <label>Thumbnail</label><br>
-                    <input type='text' name='thumbnail' value='".$movie['thumbnail']."'><br>
+                    <input type='text' name='thumbnail' value='".$movieData->thumbnail."'><br>
                     <label>Duration</label><br>
-                    <input type='number' max='300' name='duration' value='".$movie['duration']."'><br>
+                    <input type='number' max='300' name='duration' value='".$movieData->duration."'><br>
                     <button class='btn btn-warning mt-3' type='submit' name='update'>Update</button>
                 </div>
             </form>
@@ -31,23 +31,13 @@ if (!empty($_GET["movie_id"])) {
         header("Location: movie.php");
     }
 } else if(!empty($_GET["update_id"])) {
-    $movieId = $_GET["update_id"];
-    $title = $_POST["title"];
-    $description = $_POST["description"];
-    $main_actor = $_POST["main_actor"];
-    $thumbnail = $_POST["thumbnail"];
-    $duration = $_POST["duration"];
-    
-    $update_data = [
-        "movie_id" => $movieId,
-        "title" => $title,
-        "description" => $description,
-        "main_actor" => $main_actor,
-        "thumbnail" => $thumbnail,
-        "duration" => $duration
-    ];
-
-    $movieRepository->updateMovieById($update_data);
+    $movieUpdate = $movie->view($_GET["update_id"]);
+    $movieUpdate->title = $_POST["title"];
+    $movieUpdate->description = $_POST["description"];
+    $movieUpdate->main_actor = $_POST["main_actor"];
+    $movieUpdate->thumbnail = $_POST["thumbnail"];
+    $movieUpdate->duration = $_POST["duration"];
+    $movieUpdate->update();
     header("Location: movie.php");
 } else {    
     header("Location: movie.php");

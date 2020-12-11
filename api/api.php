@@ -1,6 +1,6 @@
 <?php
 require_once dirname(dirname(__FILE__)). "/core/Authentication.php";
-require_once dirname(dirname(__FILE__)). "/repositories/MovieRepository.php";
+require_once dirname(dirname(__FILE__)). "/models/Movie.php";
 
 $_POST = json_decode(file_get_contents('php://input'), true);
 
@@ -35,8 +35,9 @@ class Api {
         switch($action) {
             case "delete":
                 $id = $data;
-                $movieRepository = new MovieRepository();
-                $movieRepository->deleteMovieById($id);
+                $movie = new Movie();
+                $movieInstance = $movie->view($id);
+                $movieInstance->delete();
                 $response = json_encode([
                     "message" => "Successfully deleted"
                 ]);

@@ -33,24 +33,3 @@ if (!empty($_POST)) {
 
 require_once dirname(__FILE__). "/views/html/heading.php";
 require_once dirname(__FILE__). "/views/html/addMovie.html";
-
-
-
-
-
-----------------------------------------------------------
-3 Model
-$user = new User();
-$user->view($id);
-
-----------------------------------------------------------
-2 Repostiory
-function getUserById($id) {
-    $sql = "SELECT * FROM users WHERE id = $id";
-    $result $this->connection->query($sql);
-    return $result->fetch();
-}
-
-----------------------------------------------------------
-1 SQL
-SELECT * FROM users

@@ -71,7 +71,14 @@ class Movie extends BaseModel {
     }
 
     public function update() {
-        
+        return $this->movieRepository->updateMovieById(
+            $this->id,
+            $this->title,
+            $this->description,
+            $this->main_actor,
+            $this->thumbnail,
+            $this->duration
+        );
     }
 
     public function delete() {

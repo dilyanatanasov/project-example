@@ -25,18 +25,18 @@ class MovieRepository extends Db {
         return true;
     }
 
-    public function updateMovieById($update_data) {
+    public function updateMovieById($id, $title, $description, $main_actor, $thumbnail, $duration) {
         $sql = "
             UPDATE
                 movies
             SET 
-              `title` = '".$update_data['title']."',
-              `description` = '".$update_data['description']."',
-              `main_actor` = '".$update_data['main_actor']."',
-              `thumbnail` = '".$update_data['thumbnail']."',
-              `duration` = '".$update_data['duration']."'
+              `title` = '".$title."',
+              `description` = '".$description."',
+              `main_actor` = '".$main_actor."',
+              `thumbnail` = '".$thumbnail."',
+              `duration` = '".$duration."'
             WHERE
-                id = ".$update_data['movie_id']."
+                id = ".$id."
         ";
         $this->connection->exec($sql);
         return true;
